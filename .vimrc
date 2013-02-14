@@ -25,7 +25,6 @@ Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-surround'
 Bundle 'mattn/webapi-vim'
-Bundle 'scrooloose/syntastic'
 
 " My settings
 set backspace=indent,eol,start
