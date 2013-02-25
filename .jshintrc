@@ -1,5 +1,9 @@
 {
   "node": true,
   "laxcomma": true,
-  "browser": true
+  "browser": true,
+  "loopfunc": true,
+  "laxbreak": true,
+  "es5": true,
+  "expr": true
 }

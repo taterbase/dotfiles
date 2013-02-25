@@ -13,23 +13,27 @@ Bundle 'gmarik/vundle'
 
 " My Bundles
 Bundle 'taterbase/Colour-Sampler-Pack'
+Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/gist-vim'
 Bundle 'wlangstroth/vim-haskell'
 Bundle 'digitaltoad/vim-jade'
-Bundle 'pangloss/vim-javascript'
-Bundle 'walm/jshint.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-surround'
 Bundle 'mattn/webapi-vim'
+Bundle 'walm/jshint.vim'
 
 " My settings
+nmap j gj
+nmap k gk
 set backspace=indent,eol,start
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 set number
 set softtabstop=2
 set shiftwidth=2
@@ -112,3 +116,6 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd FileType c,cpp,java,php,ruby,python,javascript,coffeescript autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+"Auto run jshint
+autocmd FileType javascript autocmd BufWritePost <buffer> :JSHint
