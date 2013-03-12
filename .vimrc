@@ -13,7 +13,7 @@ Bundle 'gmarik/vundle'
 
 " My Bundles
 Bundle 'taterbase/Colour-Sampler-Pack'
-Bundle 'pangloss/vim-javascript'
+Bundle 'taterbase/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
@@ -25,6 +25,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-surround'
 Bundle 'mattn/webapi-vim'
 Bundle 'walm/jshint.vim'
+Bundle 'airblade/vim-gitgutter'
 
 " My settings
 nmap j gj
@@ -118,4 +119,4 @@ endfun
 autocmd FileType c,cpp,java,php,ruby,python,javascript,coffeescript autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 "Auto run jshint
-autocmd FileType javascript autocmd BufWritePost <buffer> :JSHint
+"autocmd FileType javascript autocmd BufWritePost <buffer> :JSHint
