@@ -1,4 +1,6 @@
 set nocompatible
+
+filetype on  "make sure it's on first, otherwise bad exit code
 filetype off "Required for Vundle
 
 " Using vundle
