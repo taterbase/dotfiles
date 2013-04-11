@@ -24,7 +24,7 @@ init
 
 
 . ~/.nvm/nvm.sh
-nvm use v0.8.18
+nvm use v0.8.23
 
 ulimit -n 10000
 
