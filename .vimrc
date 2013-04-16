@@ -14,7 +14,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles
-Bundle 'taterbase/Colour-Sampler-Pack'
+Bundle 'vim-scripts/Colour-Sampler-Pack.git'
 Bundle 'taterbase/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
@@ -120,5 +120,9 @@ endfun
 
 autocmd FileType c,cpp,java,php,ruby,python,javascript,coffeescript autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
-"Auto run jshint
-"autocmd FileType javascript autocmd BufWritePost <buffer> :JSHint
+"Make sign-column background the same as the editor ( aesthetics with vim-gitgutter )
+highlight SignColumn ctermbg=236
+
+"Little customizations on top of lucius theme to suit my liking
+highlight LineNr ctermfg=243
+highlight VertSplit ctermfg=249
