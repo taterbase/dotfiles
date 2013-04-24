@@ -14,7 +14,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles
-Bundle 'vim-scripts/Colour-Sampler-Pack.git'
+Bundle 'taterbase/Colour-Sampler-Pack.git'
 Bundle 'taterbase/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
@@ -28,6 +28,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'mattn/webapi-vim'
 Bundle 'walm/jshint.vim'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'godlygeek/tabular'
 
 " My settings
 nmap j gj
@@ -44,7 +46,7 @@ set expandtab
 set scrolloff=5
 set history=200
 set smartindent
-colorscheme lucius
+colorscheme summerfruit256
 syntax on
 filetype plugin indent on
 
@@ -65,6 +67,10 @@ let g:gist_clip_comman = 'pbcopy'
 let g:gist_detect_filetype = 1
 
 "***** END GIST SETUP *****"
+
+"Remap leader key
+let mapleader=","
+nnoremap <leader>a :echo("\<leader\> works! It is set to <leader>")<CR>
 
 "Prevent auto-comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -120,9 +126,8 @@ endfun
 
 autocmd FileType c,cpp,java,php,ruby,python,javascript,coffeescript autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
-"Make sign-column background the same as the editor ( aesthetics with vim-gitgutter )
-highlight SignColumn ctermbg=236
-
-"Little customizations on top of lucius theme to suit my liking
-highlight LineNr ctermfg=243
-highlight VertSplit ctermfg=249
+"Customize indentation guides
+let g:indent_guides_auto_colors = 0
+"let g:indent_guides_enable_on_vim_startup = 1
+hi IndentGuidesOdd  ctermbg=236
+hi IndentGuidesEven ctermbg=237

@@ -28,4 +28,8 @@ nvm use v0.8.23
 
 ulimit -n 10000
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#source "/usr/local/opt/rabbitmq/sbin" # RabbitMQ
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/usr/local/opt/rabbitmq/sbin #Add rabbitmq to path
