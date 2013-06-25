@@ -5,7 +5,6 @@ filetype off "Required for Vundle
 
 " Using vundle
 " Install with git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -30,6 +29,11 @@ Bundle 'walm/jshint.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'godlygeek/tabular'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'scrooloose/nerdtree'
+Bundle 'nono/vim-handlebars'
+Bundle 'wavded/vim-stylus'
+Bundle 'othree/html5.vim'
 
 " My settings
 nmap j gj
@@ -46,9 +50,12 @@ set expandtab
 set scrolloff=5
 set history=200
 set smartindent
-colorscheme summerfruit256
+colorscheme lucius
 syntax on
 filetype plugin indent on
+
+" Go
+set rtp+=$GOROOT/misc/vim
 
 let &t_Co=256
 
@@ -78,7 +85,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "Auto-closing of braces
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {   
 inoremap {}     {}
 inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
 
@@ -125,9 +131,3 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd FileType c,cpp,java,php,ruby,python,javascript,coffeescript autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-
-"Customize indentation guides
-let g:indent_guides_auto_colors = 0
-"let g:indent_guides_enable_on_vim_startup = 1
-hi IndentGuidesOdd  ctermbg=236
-hi IndentGuidesEven ctermbg=237

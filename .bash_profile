@@ -1,4 +1,5 @@
-export NODE_ENV=local
+export NODE_ENV=development
+export MONGOOSASTIC_RIVER=true
 
 source ~/git-completion.bash
 source ~/.rvm/scripts/rvm
