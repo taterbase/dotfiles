@@ -52,6 +52,7 @@ set expandtab
 set scrolloff=5
 set history=200
 set smartindent
+set background=dark
 colorscheme lucius
 syntax on
 filetype plugin indent on
