@@ -34,6 +34,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
 Bundle 'othree/html5.vim'
+Bundle 'vimwiki/vimwiki'
+Bundle 'davidoc/taskpaper.vim'
 
 " My settings
 nmap j gj
