@@ -29,13 +29,14 @@ Bundle 'walm/jshint.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'godlygeek/tabular'
-Bundle 'jnwhiteh/vim-golang'
 Bundle 'scrooloose/nerdtree'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
 Bundle 'othree/html5.vim'
 Bundle 'vimwiki/vimwiki'
 Bundle 'davidoc/taskpaper.vim'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'Blackrush/vim-gocode'
 
 " My settings
 nmap j gj
@@ -46,12 +47,14 @@ set incsearch
 set ignorecase
 set smartcase
 set number
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 set scrolloff=5
 set history=200
 set smartindent
+
 colorscheme lucius
 syntax on
 filetype plugin indent on
@@ -133,3 +136,5 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd FileType c,cpp,java,php,ruby,python,javascript,coffeescript autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+autocmd BufWritePre *.go :Fmt

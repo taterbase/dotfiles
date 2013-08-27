@@ -1,6 +1,14 @@
 export NODE_ENV=development
 export MONGOOSASTIC_RIVER=true
 
+# Go environment variables
+export GOROOT=~/go
+export GOBIN=$GOROOT/bin
+export PATH=$GOBIN:$PATH
+export GOPATH=~/Workspace/golang
+
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+
 source ~/git-completion.bash
 source ~/.rvm/scripts/rvm
 
@@ -33,4 +41,4 @@ ulimit -n 10000
 #source "/usr/local/opt/rabbitmq/sbin" # RabbitMQ
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:/usr/local/opt/rabbitmq/sbin #Add rabbitmq to path
+PATH=$PATH:/usr/local/sbin
