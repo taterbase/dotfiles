@@ -135,6 +135,6 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-autocmd FileType c,cpp,java,php,ruby,python,javascript,coffeescript autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,javascript,coffeescript,coffee autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 autocmd BufWritePre *.go :Fmt

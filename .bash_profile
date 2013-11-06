@@ -1,5 +1,4 @@
 export NODE_ENV=development
-export MONGOOSASTIC_RIVER=true
 
 # Go environment variables
 export GOROOT=~/go
@@ -10,7 +9,7 @@ export GOPATH=~/Workspace/golang
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 
 source ~/git-completion.bash
-source ~/.rvm/scripts/rvm
+source ~/.tokbox
 
 #showing git branches in bash prompt
 function parse_git_branch {
@@ -33,12 +32,10 @@ init
 
 
 . ~/.nvm/nvm.sh
-nvm use v0.8.23
+nvm use v0.8.25
 
 ulimit -n 10000
 
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-#source "/usr/local/opt/rabbitmq/sbin" # RabbitMQ
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/sbin
+PATH=~/.rbenv/shims:$PATH
+PATH=$PATH:~/Workspace/depot_tools
