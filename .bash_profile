@@ -1,4 +1,5 @@
 export NODE_ENV=development
+export GREP_OPTIONS='--color=auto'
 
 # Go environment variables
 export GOROOT=~/go
