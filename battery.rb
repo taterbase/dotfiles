@@ -42,6 +42,6 @@ empty_stars = star_count - full_stars
 full_stars.times  {outstring += "#{full} "}
 empty_stars.times {outstring += "#{empty} "}
 
-outstring += v[:time] == "0:00" ? " charged" : " #{v[:time]}"
+#outstring += v[:time] == "0:00" ? " charged" : " #{v[:time]}"
 
 puts outstring

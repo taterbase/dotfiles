@@ -1,16 +1,19 @@
+if [ -f /etc/profile ]; then
+    PATH=""
+    source /etc/profile
+fi
+
 export NODE_ENV=development
 export GREP_OPTIONS='--color=auto'
 
 # Go environment variables
-export GOROOT=~/go
-export GOBIN=$GOROOT/bin
-export PATH=$GOBIN:$PATH
 export GOPATH=~/Workspace/golang
+export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
 
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 
 source ~/git-completion.bash
-source ~/.tokbox
 
 #showing git branches in bash prompt
 function parse_git_branch {
@@ -33,10 +36,16 @@ init
 
 
 . ~/.nvm/nvm.sh
-nvm use v0.8.25
+nvm use v0.10.22
 
 ulimit -n 10000
 
 PATH=$PATH:/usr/local/sbin
-PATH=~/.rbenv/shims:$PATH
 PATH=$PATH:~/Workspace/depot_tools
+
+### rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

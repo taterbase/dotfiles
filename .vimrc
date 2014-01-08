@@ -29,7 +29,7 @@ Bundle 'walm/jshint.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'godlygeek/tabular'
-Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-vinegar'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
 Bundle 'othree/html5.vim'
@@ -37,6 +37,7 @@ Bundle 'vimwiki/vimwiki'
 Bundle 'davidoc/taskpaper.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Blackrush/vim-gocode'
+Bundle 'amix/vim-zenroom'
 
 " My settings
 nmap j gj
@@ -47,10 +48,6 @@ set incsearch
 set ignorecase
 set smartcase
 set number
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
 set scrolloff=5
 set history=200
 set smartindent
@@ -135,6 +132,9 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-autocmd FileType c,cpp,java,php,ruby,python,javascript,coffeescript,coffee autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-
-autocmd BufWritePre *.go :Fmt
+autocmd BufWritePre *.go Fmt
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+autocmd Filetype go setlocal ts=2 sts=2 sw=2 noexpandtab
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
