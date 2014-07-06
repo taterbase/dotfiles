@@ -30,6 +30,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-vinegar'
+"Bundle 'scrooloose/nerdtree'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
 Bundle 'othree/html5.vim'
@@ -38,6 +39,8 @@ Bundle 'davidoc/taskpaper.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'amix/vim-zenroom'
+Bundle 'slim-template/vim-slim'
+Bundle 'hhvm/vim-hack'
 
 " My settings
 nmap j gj
@@ -59,7 +62,11 @@ filetype plugin indent on
 " Go
 set rtp+=$GOROOT/misc/vim
 
+" 256 colors
 let &t_Co=256
+
+" Only run git gutter on saves
+let g:gitgutter_eager = 0
 
 "***** GIST SETUP *****"
 
@@ -132,9 +139,17 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
+autocmd BufNewFile,BufRead *.iced set filetype=coffee
+
 autocmd BufWritePre *.go Fmt
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 autocmd Filetype go setlocal ts=2 sts=2 sw=2 noexpandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype css setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype eruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype php setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype slim setlocal ts=2 sts=2 sw=2 expandtab

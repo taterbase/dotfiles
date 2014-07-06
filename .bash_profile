@@ -3,6 +3,9 @@ if [ -f /etc/profile ]; then
     source /etc/profile
 fi
 
+# For my docker bros
+export DOCKER_HOST=tcp://127.0.0.1:4243
+
 export NODE_ENV=development
 export GREP_OPTIONS='--color=auto'
 
@@ -19,6 +22,7 @@ source ~/git-completion.bash
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+
 function init {
   local          RED="\[\033[0;31m\]"
   local    LIGHT_RED="\[\033[1;31m\]"
@@ -28,15 +32,16 @@ function init {
   local   LIGHT_GRAY="\[\033[0;37m\]"
   local LIGHT_PURPLE="\[\033[1;34m\]"
   local   LIGHT_BLUE="\[\033[0;36m\]"
+  local        BLACK="\[\033[0;30m\]"
 
-  PS1="$LIGHT_RED\W$YELLOW\$(parse_git_branch) $LIGHT_PURPLE> $LIGHT_GRAY"
+  PS1="$LIGHT_RED\W$LIGHT_BLUE\$(parse_git_branch) ⚡️  $LIGHT_GRAY"
 }
 
 init
 
 
 . ~/.nvm/nvm.sh
-nvm use v0.10.22
+nvm use v0.10.26
 
 ulimit -n 10000
 

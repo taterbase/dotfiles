@@ -6,5 +6,11 @@
 
 [github]
   user = taterbase
+
 [push]
 	default = simple
+
+[branch "master"]
+		rebase = true
+[branch]
+		autosetuprebase = always
