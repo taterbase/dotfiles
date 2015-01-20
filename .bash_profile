@@ -41,7 +41,7 @@ init
 
 
 . ~/.nvm/nvm.sh
-nvm use v0.10.26
+nvm use v0.10.32
 
 ulimit -n 10000
 

@@ -41,6 +41,10 @@ Bundle 'Blackrush/vim-gocode'
 Bundle 'amix/vim-zenroom'
 Bundle 'slim-template/vim-slim'
 Bundle 'hhvm/vim-hack'
+Bundle 'mattn/flappyvird-vim'
+Bundle 'leafgarland/typescript-vim'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'brettof86/vim-swigjs'
 
 " My settings
 nmap j gj
@@ -146,6 +150,7 @@ autocmd FileType go autocmd BufWritePre <buffer> Fmt
 autocmd Filetype go setlocal ts=2 sts=2 sw=2 noexpandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype jade setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sts=2 sw=2 expandtab
@@ -153,3 +158,5 @@ autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype eruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype php setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype slim setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype ejs setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype typescript setlocal ts=2 sts=2 sw=2 expandtab
