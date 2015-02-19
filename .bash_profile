@@ -23,6 +23,10 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+function brand {
+  echo -e "\xe2\x9a\xa1" #⚡️ without trailing whitespace utf8
+}
+
 function init {
   local          RED="\[\033[0;31m\]"
   local    LIGHT_RED="\[\033[1;31m\]"
@@ -34,14 +38,14 @@ function init {
   local   LIGHT_BLUE="\[\033[0;36m\]"
   local        BLACK="\[\033[0;30m\]"
 
-  PS1="$LIGHT_RED\W$LIGHT_BLUE\$(parse_git_branch) ⚡️  $LIGHT_GRAY"
+  PS1="\$(brand)  $WHITE\W$LIGHT_GRAY \$(parse_git_branch) $WHITE" 
 }
 
 init
 
 
-. ~/.nvm/nvm.sh
-nvm use v0.10.32
+source $(brew --prefix nvm)/nvm.sh
+nvm use v0.10.35
 
 ulimit -n 10000
 
@@ -54,3 +58,9 @@ eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+## CDPATH
+source ~/.cdpath
+
+## 256 colors
+export TERM=xterm-256color
