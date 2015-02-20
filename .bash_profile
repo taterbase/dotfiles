@@ -20,7 +20,7 @@ source ~/git-completion.bash
 
 #showing git branches in bash prompt
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
 
 function brand {
@@ -34,11 +34,12 @@ function init {
   local  LIGHT_GREEN="\[\033[1;32m\]"
   local        WHITE="\[\033[1;37m\]"
   local   LIGHT_GRAY="\[\033[0;37m\]"
+  local    DARK_GRAY="\[\033[1;30m\]"
   local LIGHT_PURPLE="\[\033[1;34m\]"
   local   LIGHT_BLUE="\[\033[0;36m\]"
   local        BLACK="\[\033[0;30m\]"
 
-  PS1="\$(brand)  $WHITE\W$LIGHT_GRAY \$(parse_git_branch) $WHITE" 
+  PS1="\$(brand)  $WHITE\W$LIGHT_GRAY \$(parse_git_branch)$WHITE" 
 }
 
 init
