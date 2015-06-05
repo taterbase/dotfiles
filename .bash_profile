@@ -46,7 +46,6 @@ init
 
 
 source $(brew --prefix nvm)/nvm.sh
-nvm use v0.10.35
 
 ulimit -n 10000
 
@@ -60,8 +59,6 @@ eval "$(rbenv init -)"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-## CDPATH
-source ~/.cdpath
 
 ## 256 colors
 export TERM=xterm-256color

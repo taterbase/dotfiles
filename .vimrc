@@ -30,14 +30,12 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-vinegar'
-"Bundle 'scrooloose/nerdtree'
 Bundle 'nono/vim-handlebars'
 Bundle 'wavded/vim-stylus'
 Bundle 'othree/html5.vim'
 Bundle 'vimwiki/vimwiki'
 Bundle 'davidoc/taskpaper.vim'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'Blackrush/vim-gocode'
 Bundle 'amix/vim-zenroom'
 Bundle 'slim-template/vim-slim'
 Bundle 'hhvm/vim-hack'
@@ -45,6 +43,7 @@ Bundle 'mattn/flappyvird-vim'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'brettof86/vim-swigjs'
+Bundle 'fatih/vim-go'
 
 " My settings
 nmap j gj
@@ -68,6 +67,7 @@ set rtp+=$GOROOT/misc/vim
 
 " 256 colors
 let &t_Co=256
+set t_ut=
 
 " Only run git gutter on saves
 let g:gitgutter_eager = 0
@@ -145,9 +145,6 @@ endfun
 
 autocmd BufNewFile,BufRead *.iced set filetype=coffee
 
-autocmd BufWritePre *.go Fmt
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-autocmd Filetype go setlocal ts=2 sts=2 sw=2 noexpandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype jade setlocal ts=2 sts=2 sw=2 expandtab
