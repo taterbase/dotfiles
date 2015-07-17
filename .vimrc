@@ -45,7 +45,7 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'brettof86/vim-swigjs'
 Bundle 'fatih/vim-go'
 Bundle 'Shougo/neocomplete.vim'
-Bundle 'tpope/vim-flagship'
+Bundle 'mtth/scratch.vim'
 
 " My settings
 nmap j gj
@@ -144,6 +144,7 @@ endfun
 
 autocmd BufNewFile,BufRead *.iced set filetype=coffee
 
+autocmd Filetype go setlocal ts=4
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype jade setlocal ts=2 sts=2 sw=2 expandtab
@@ -159,9 +160,3 @@ autocmd Filetype typescript setlocal ts=2 sts=2 sw=2 expandtab
 
 " Auto complete
 let g:neocomplete#enable_at_startup = 1
-
-"vim-flagship settings
-set laststatus=2
-set showtabline=2
-set guioptions-=e
-let g:tablabel = "%N %{flagship#tabmodified()} %{flagship#tabcwds('shorten', ',')}"
