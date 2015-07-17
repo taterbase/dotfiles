@@ -160,3 +160,13 @@ autocmd Filetype typescript setlocal ts=2 sts=2 sw=2 expandtab
 
 " Auto complete
 let g:neocomplete#enable_at_startup = 1
+
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+map <C-_> <C-W>_
+map <C-|> <C-W>|
+
+" Disable bell
+set vb
