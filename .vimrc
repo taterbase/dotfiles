@@ -165,8 +165,6 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
-map <C-_> <C-W>_
-map <C-|> <C-W>|
 
 " Disable bell
 set vb
