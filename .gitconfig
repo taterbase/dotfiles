@@ -16,3 +16,10 @@
 		autosetuprebase = always
 [alias]
 	up = "!git remote update -p; git merge --ff-only @{u}"
+[spacemonkey]
+	name = george
+	user = george
+	gerrithost = gerrit.spacemonkey.com
+	gerritport = 29418
+[core]
+	editor = vim

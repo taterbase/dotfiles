@@ -61,6 +61,7 @@ set history=200
 set smartindent
 set background=dark
 colorscheme lucius
+set background=light
 syntax on
 filetype plugin indent on
 
