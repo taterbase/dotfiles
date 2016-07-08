@@ -168,3 +168,5 @@ map <C-H> <C-W>h
 
 " Disable bell
 set vb
+
+let g:go_fmt_command = "goimports"
