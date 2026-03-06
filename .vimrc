@@ -1,23 +1,14 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin()
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-vinegar'
+Plug 'keith/swift.vim'
+Plug 'taterbase/1989.vim'
+Plug 'fatih/vim-go'
+Plug 'catppuccin/vim'
+Plug 'rust-lang/rust.vim'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-vinegar'
-Plugin 'keith/swift.vim'
-Plugin 'taterbase/1989.vim'
-Plugin 'fatih/vim-go'
-Plugin 'catppuccin/vim'
-Plugin 'rust-lang/rust.vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()
 
 set backspace=indent,eol,start
 set hlsearch
